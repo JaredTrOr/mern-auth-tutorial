@@ -1,0 +1,5 @@
+### TESTING OF THE MAIN GET METHOD  
+GET http://localhost:3000/
+
+### TESTING USER ROUTE
+GET http://localhost:3000/api/user
