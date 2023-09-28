@@ -1,0 +1,25 @@
+{
+  "name": "fullstack-mern-project-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch api/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaredTrOr/mern-auth-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaredTrOr/mern-auth-tutorial/issues"
+  },
+  "homepage": "https://github.com/JaredTrOr/mern-auth-tutorial#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
