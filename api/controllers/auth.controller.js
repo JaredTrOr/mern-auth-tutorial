@@ -3,7 +3,7 @@ import bcryptjs from 'bcryptjs'
 
 export class AuthController {
     
-    static async signup(req,res) {
+    static async signup(req,res, next) {
         const {username, email, password} = req.body
         const hashedPassword = bcryptjs.hashSync(password, 10)
         const newUser = new User({username, email, password: hashedPassword})
@@ -13,7 +13,7 @@ export class AuthController {
             res.status(201).json({success: true, message: 'User created succesfully'})
         }
         catch(err) {
-            res.status(500).json({success: false, message: `Error creating the user: ${err}`})
+            next(err)
         }
     }
 }
