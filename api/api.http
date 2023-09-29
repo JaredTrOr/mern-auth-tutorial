@@ -3,3 +3,13 @@ GET http://localhost:3000/
 
 ### TESTING USER ROUTE
 GET http://localhost:3000/api/user
+
+###SIGN UP POST
+POST http://localhost:3000/api/auth/signup
+Content-Type: application/json
+
+{
+    "username": "user",
+    "email": "user@gmail.com",
+    "password": "123"
+}
