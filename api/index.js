@@ -21,7 +21,7 @@ app.get('/', (req,res) => res.json({message: 'MERN-AUTH server online'}))
 app.use('/api/user', userRouter)
 app.use('/api/auth', authRouter)
 
-app.use((err, req, res, next) => {
+app.use((err, req, res, next) => { //General error middleware
     const statusCode = err.statusCode || 500
     const message = err.message || 'Internal server error'
     return res.status(statusCode).json({
