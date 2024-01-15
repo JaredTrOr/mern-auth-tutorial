@@ -22,7 +22,7 @@ app.use('/api/user', userRouter)
 app.use('/api/auth', authRouter)
 
 app.use((err, req, res, next) => { //General error middleware
-    return res.status(err.statusCode).json({
+    return res.status(err.statusCode || 500).json({
         success: false,
         message: err.message || 'Internal server error', 
         statusCode: err.statusCode || 500

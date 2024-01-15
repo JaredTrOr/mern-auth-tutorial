@@ -35,7 +35,7 @@ export class AuthController {
             
             const expireDate = new Date(Date.now() + 36000000) //1 hour
 
-            res.cookie('access_token', token, {httpOnly: true, expires: expireDate}).status(200).json(rest)
+            res.cookie('access_token', token, {httpOnly: true, expires: expireDate}).status(200).json({success: true, ...rest})
         }catch (err) {
             next(err)
         }
